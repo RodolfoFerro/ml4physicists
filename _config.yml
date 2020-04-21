@@ -1,0 +1,31 @@
+title: "Online Course: Machine Learning for Physicists 2020"
+author: "Rodolfo Ferro"
+description: "Online Course: Machine Learning for Physicists 2020. This site is mantained with <b style=\"color: #f45;\">&lt;3</b> by <b><a href=\"https://github.com/RodolfoFerro\">@RodolfoFerro</a></b>."
+permalink: /:title/
+lang: "en"
+date_format: "%B %d, %Y"
+
+sidebar: true                # show a sidebar instead of the usual header
+show_excerpts: false         # show article excerpts on the home page
+dark_header: false           # keep the top-header dark
+hide_title: false            # hide the site title in the header
+minimal: false               # minima-inspired style without box-shadows
+
+# see http://fontawesome.com/icons for icons
+
+navigation:
+  - {file: "index.html", icon: home}
+#  - {file: "README.md", icon: address-card}
+
+external:
+  - {title: About, icon: address-card, url: "https://rodolfoferro.glitch.me/"}
+  - {title: Email, icon: envelope, url: "mailto:ferro@cimat.mx"}
+  - {title: GitHub, icon: github, url: "https://github.com/RodolfoFerro"}
+  - {title: Twitter, icon: twitter, url: "https://twitetr.com/FerroRodolfo"}
+
+comments:                    # embed disqus or isso comments
+#  disqus: ""
+#  isso: ""
+
+plugins:
+ - jekyll-feed

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article>
+  <header><h1>Online Course: Machine Learning for Physicists 2020</h1></header>
+  <p>This site contains all the lectures and material of the Online Course: Machine Learning for Physicists 2020 taught at the <a href="https://www.physics.nat.fau.eu/">physics department</a> of the <a href="https://www.fau.eu/">university in Erlangen</a> (Bavaria/Germany).</p>
+  <p>This course is taught by Florian Marquardt (PhD), a theoretical physicist working at the intersection of nanophysics and quantum optics, with a strong recent focus on applications of machine learning. His group is located at the <a href="https://mpl.mpg.de/divisions/marquardt-division/">Max Planck Institute for the Science of Light</a>, and he is also affiliated with the university in Erlangen.</p>
+  <p>The original website for the course is <a href="https://machine-learning-for-physicists.org">https://machine-learning-for-physicists.org</a>, but the detailed up-to-date materials for the 2020 online version will be found on <a href="https://pad.gwdg.de/s/HJtiTE__U">this version of the website</a>!</p>
+</article>
+
+<article>
+  <header><h2>Software needed</h2></header>
+  <p>First of all, you want to install the <a href="https://python.org/">Python</a> programming language. Also, Florian recommends <a href="https://jupyter.org/">JupyterLab</a> as a convenient notebook interface for python programming. Depending on your taste and your system, you might want to download these individually or as part of a full distribution like <a href="https://www.anaconda.com/">Anaconda</a>.</p>
+  <p>An alternative, completely online solution is the <a href="https://colab.research.google.com/">Colaboratory</a> platform by Google. This is a web-based jupyter notebook interface to python that comes with TensorFlow & Keras pre-installed and allows you to run your code for free on their GPU servers.</p>
+  <center><a href="https://colab.research.gooogle.com/" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg"></a></center>
+  <p>Starting in the 3rd lecture, we will use Keras, the convenient high-level python neural-network software package. This is included automatically in every recent TensorFlow installation, so Florian recommends installing TensorFlow (after having python) and then getting access to Keras commands in the form:</p>
+  <pre><code class="python">
+    import tensorflow as tf
+    from tensorflow.keras.layers import Dense
+  </code></pre>
+  <p>I provide a third option to run the contents using <a href="https://mybinder.org/">Mybinder</a>. To run the contents you can simply click the following button. This will create a container with all the needed packages.</p>
+  <center><a href="https://mybinder.org/v2/gh/RodolfoFerro/ml4physicists/master" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a></center>
+</article>
+
+{% if site.show_excerpts %}
+  {%- assign posts = paginator.posts | default: site.posts -%}
+  {% for post in posts %}
+    {% include post.html post=post preview=true %}
+  {% endfor %}
+{% else %}
+  {% include archive.html title="Sessions" %}
+{% endif %}
+
+{% if paginator.total_pages > 1 %}
+  <footer>
+    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">« newer posts</a>{% else %}<span></span>{% endif %}
+    <span>page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">older posts »</a>{% else %}<span></span>{% endif %}
+  </footer>
+{% endif %}

@@ -1,0 +1,76 @@
+body
+  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif
+  font-size: $font-size
+  font-weight: $font-weight
+  line-height: $line-height
+  margin: 0
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+b, strong, th
+  font-weight: $font-weight + 200
+
+a
+  color: $link-color
+  text-decoration: inherit
+  &:hover
+    text-decoration: underline
+
+header a, footer a
+  color: inherit
+
+header time
+  color: reduce(100)
+
+hr
+  border: 1px solid reduce(30)
+  margin: 2em 0
+
+blockquote
+  background: reduce(4)
+  border-left: 3px solid reduce(70)
+  padding: 1px 1.5em
+
+blockquote p
+  opacity: .7
+
+blockquote, figure
+  margin: 1em 0
+
+img, li
+  margin: .5em 0
+
+img
+  border-radius: 2px
+  max-width: 100%
+  height: auto
+
+table
+  width: 100%
+  border-collapse: collapse
+
+th, td
+  padding: .5em 1em
+
+tr
+  border: 1px solid reduce(20)
+
+tr:hover, tr:nth-child(odd) td
+  background: reduce(4)
+
+pre
+  background: reduce(12)
+  border-radius: 2px
+  font-size: .8em
+  margin: 1.5em 0
+  padding: .8em 1.2em
+  overflow-x: auto
+
+\:not(pre) > code
+  font-size: .9em
+  background: reduce(15)
+  opacity: .7
+  border-radius: 2px
+  margin: 0 .1em
+  padding: .2em .4em

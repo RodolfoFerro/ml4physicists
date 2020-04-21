@@ -1,0 +1,58 @@
+---
+---
+
+@import highlight
+
+.categories
+  color: #68f
+
+.categories + h1
+  margin: .1em 0
+
+{% if site.sidebar %}
+
+.hidden
+  display: none
+
+{% endif %}
+
+{% if site.sidebar or site.external %}
+
+.icons svg
+  height: 1em
+  width: 1em
+  fill: currentColor
+  transition: .2s color
+  vertical-align: middle
+  flex-shrink: 0
+
+{% endif %}
+
+{% unless site.show_excerpts %}
+
+.archive
+  font-size: 1.1em
+
+.archive time
+  display: inline-block
+  min-width: 10ch
+  margin: 0 .2em
+
+{% endunless %}
+
+{% unless site.sidebar %}
+
+.icons a:hover svg
+  color: #919191
+
+.full > a
+  font-size: 1.6em
+  width: 100%
+  margin: .1em 0 .6em
+
+@media (min-width: 60em)
+  .large img
+    max-width: 140%
+    margin: .5em -20%
+
+{% endunless %}
