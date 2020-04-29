@@ -266,7 +266,7 @@ class NeuralNet:
 			vmax_b = np.maximum(vmax_b, np.max(np.abs(self.b[b_i])))
 
 		# Plot connections
-		for b_i in range(len(biases)):
+		for b_i in range(len(self.b)):
 			for n_i in range(len(pos_x[b_i])):
 				for n_j in range(len(pos_x[b_i + 1])):
 					self.plot_connection(
